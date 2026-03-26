@@ -1,1 +1,11 @@
-# DATASAURUS-JAVA-EE
+# 🦕 Datasaurus 🦕
+Un système de gestion de base de données sur les dinosaures, très simple ! Vous pouvez voir, ajouter, supprimer et modifier des dinosaures.
+<img width="1600" height="900" alt="main_menu" src="" />
+
+## Installation de la Base de Données
+1. Créez une base de données nommée `bdd_sdzee`.
+2. Importez le script SQL `SGBD/db_setup.sql` pour créer les tables et insérer les données de base.
+
+### Identifiants de test :
+- **Login :** test@test.com
+- **Mot de passe :** mdp

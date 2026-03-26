@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+@font-face {
+    font-family: 'DinosaureFont';
+    src: url('JurassicPark-BL48.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url("background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333333;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size:18px;
+}
+
+.logo:hover{
+	transform: scale(1.05);
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px auto;
+    border: 3px solid rgb(50, 50, 50);
+    border-bottom: 7px solid rgb(50, 50, 50);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1000px;
+}
+
+h1 {
+    font-family: 'DinosaureFont', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 110px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-image: linear-gradient(#58cc38, #097748);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+th a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+tr:nth-child(odd) {
+    background-image: linear-gradient(to right, #ffffff, #b3b3b3)  !important;
+}
+
+tr:nth-child(even) {
+    background-image: linear-gradient(to right, #ffffff, #b3b3b3) !important;
+}
+
+tr:hover {
+    background-image: linear-gradient(to right, #e3e3e3, #9c9c9c)  !important;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar form {
+    display: flex;
+    gap: 10px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+}
+
+.table-responsive table {
+    min-width: 600px;
+    white-space: nowrap; 
+}
+
+button,
+button:focus,
+.btn-custom,
+.btn-custom:focus {
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(#58cc38, #097748);
+  border: 2px solid rgb(50, 50, 50);
+  border-bottom: 5px solid rgb(50, 50, 50);
+  box-shadow: 0px 1px 6px 0px rgb(158, 129, 254);
+  transform: translate(0, -3px);
+  cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+  color: #fff !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+button:active,
+.btn-custom:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid rgb(50, 50, 50);
+}
+
+.btn-custom-danger,
+.btn-custom-danger:focus {
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(#ff4d4d, #b30000);
+  border: 2px solid rgb(50, 50, 50);
+  border-bottom: 5px solid rgb(50, 50, 50);
+  box-shadow: 0px 1px 6px 0px rgb(255, 100, 100);
+  transform: translate(0, -3px);
+  cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+  color: #fff !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.btn-custom-danger:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid rgb(50, 50, 50);
+}
+
+
+a {
+    color: #27860a;
+    text-decoration: none;
+}
+
+.navbar{
+    background-color: rgba(23, 75, 7, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(120, 190, 100, 0.2);
+}
+
+.navbar-brand{
+    color : #ffffff;
+    font-size: 50px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.navbar-brand:hover{
+    color : #bebebe;
+    transform: scale(1.05);
+}
+
+a:hover {
+    text-decoration: underline;
+    color:#174b07;
+    
+}
+
+.error, .alert-error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #fecaca;
+    margin-bottom: 20px;
+}
+
+.success, .alert-success {
+    background-color: #dcfce3;
+    color: #15803d;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #bbf7d0;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #475569;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgb(50, 50, 50);
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #ffffff;
+    box-shadow: inset 0px 3px 0px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #58cc38;
+    box-shadow: inset 0px 3px 0px rgba(0, 0, 0, 0.1), 0px 0px 8px rgba(88, 204, 56, 0.5);
+    background-color: #fcfcfc;
+}
+
+.animate__animated {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion: reduce), (print) {
+    .animate__animated {
+        animation-duration: 1ms !important;
+        transition-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+
+.form-wrapper {
+    background: #ffffff;
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 12px;
+    border: 3px solid rgb(50, 50, 50);
+    border-bottom: 7px solid rgb(50, 50, 50);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #f1f5f9;
+}
