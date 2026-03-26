@@ -5,7 +5,7 @@ Un système de gestion de base de données sur les dinosaures, très simple ! Vo
 ## Installation de la Base de Données
 1. Créez une base de données nommée `bdd_sdzee`.
 
-2. Importez le script SQL `SGBD/db_setup.sql` pour créer les tables et insérer les données de base.
+2. Importez le script SQL `db_setup.sql` pour créer les tables et insérer les données de base.
 
 ### Identifiants de test :
 - **Login :** test@test.com
