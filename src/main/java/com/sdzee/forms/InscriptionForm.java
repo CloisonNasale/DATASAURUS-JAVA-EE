@@ -71,18 +71,26 @@ public final class InscriptionForm {
     }
 
     private void validationMotDePasse( String motDePasse ) throws Exception {
-        if ( motDePasse != null ) {
-            if ( motDePasse.length() < 3 ) {
-                throw new Exception( "Les mots de passe doivent contenir au moins 3 caractères." );
-            }
-        } else {
+        if ( motDePasse == null ) {
             throw new Exception( "Merci de saisir votre mot de passe." );
+        }
+        if ( motDePasse.length() < 8 ) {
+            throw new Exception( "Le mot de passe doit contenir au moins 8 caractères." );
+        }
+        if ( !motDePasse.matches( ".*[A-Z].*" ) ) {
+            throw new Exception( "Le mot de passe doit contenir au moins une lettre majuscule." );
+        }
+        if ( !motDePasse.matches( ".*[0-9].*" ) ) {
+            throw new Exception( "Le mot de passe doit contenir au moins un chiffre." );
+        }
+        if ( !motDePasse.matches( ".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>/?].*" ) ) {
+            throw new Exception( "Le mot de passe doit contenir au moins un caractère spécial (!@#$%^&*...)." );
         }
     }
 
     private void validationNom( String nom ) throws Exception {
-        if ( nom != null && nom.length() < 3 ) {
-            throw new Exception( "Le nom d'utilisateur doit contenir au moins 3 caractères." );
+        if ( nom != null && nom.length() < 5 ) {
+            throw new Exception( "Le nom d'utilisateur doit contenir au moins 5 caractères." );
         }
     }
 

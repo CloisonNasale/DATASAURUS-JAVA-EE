@@ -192,22 +192,33 @@ a:hover {
     
 }
 
-.error, .alert-error {
+/* Alerte globale d'erreur (bloc) */
+.alert-error {
     background-color: #fee2e2;
     color: #b91c1c;
     padding: 15px;
     border-radius: 4px;
     border: 1px solid #fecaca;
     margin-bottom: 20px;
+    display: block;
+}
+
+/* Erreur inline sous un champ de formulaire */
+.error {
+    display: block;
+    color: #b91c1c;
+    font-size: 0.85em;
+    margin-top: 5px;
 }
 
 .success, .alert-success {
-    background-color: #dcfce3;
+    background-color: #dcfce7;
     color: #15803d;
     padding: 15px;
     border-radius: 4px;
     border: 1px solid #bbf7d0;
     margin-bottom: 20px;
+    display: block;
 }
 
 .form-group {

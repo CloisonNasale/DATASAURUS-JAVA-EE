@@ -1,4 +1,4 @@
-package com.sdzee.servlets;
+	package com.sdzee.servlets;
 
 import java.io.IOException;
 
@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import java.sql.SQLIntegrityConstraintViolationException;
 
 import com.sdzee.beans.Utilisateur;
 import com.sdzee.dao.DAOException;
@@ -36,7 +38,13 @@ public class Inscription extends HttpServlet {
                 utilisateurDao.creer( utilisateur );
                 request.setAttribute( "succes", "Inscription réussie !" );
             } catch ( DAOException e ) {
-                request.setAttribute( "erreur", "Erreur lors de l'inscription : " + e.getMessage() );
+                Throwable cause = e.getCause();
+                if ( cause instanceof SQLIntegrityConstraintViolationException ) {
+                    // Email déjà utilisé → message convivial
+                    request.setAttribute( "erreur", "Cette adresse email est déjà utilisée. Veuillez en choisir une autre." );
+                } else {
+                    request.setAttribute( "erreur", "Une erreur est survenue lors de l'inscription. Veuillez réessayer." );
+                }
             }
         } else {
             request.setAttribute( "form", form );

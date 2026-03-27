@@ -29,7 +29,7 @@
     <label for="nom">Nom d'utilisateur</label>
     <input type="text" id="nom" name="nom" value="<c:out value='${utilisateur.nom}'/>" required />
     <c:if test="${!empty form.erreurs['nom']}">
-        <span class="error" style="color: red; font-size: 0.9em;">${form.erreurs['nom']}</span>
+        <span class="error">${form.erreurs['nom']}</span>
     </c:if>
 </div>
 
@@ -37,7 +37,7 @@
     <label for="email">Adresse email</label>
     <input type="email" id="email" name="email" value="<c:out value='${utilisateur.email}'/>" required />
     <c:if test="${!empty form.erreurs['email']}">
-        <span class="error" style="color: red; font-size: 0.9em;">${form.erreurs['email']}</span>
+        <span class="error">${form.erreurs['email']}</span>
     </c:if>
 </div>
 
@@ -45,7 +45,7 @@
     <label for="motdepasse">Mot de passe</label>
     <input type="password" id="motdepasse" name="motdepasse" required />
     <c:if test="${!empty form.erreurs['motdepasse']}">
-        <span class="error" style="color: red; font-size: 0.9em;">${form.erreurs['motdepasse']}</span>
+        <span class="error">${form.erreurs['motdepasse']}</span>
     </c:if>
 </div>
                 
