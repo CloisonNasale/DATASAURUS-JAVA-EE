@@ -4,7 +4,7 @@
 <nav class="navbar mb-4 animate__animated animate__fadeIn position-relative d-flex align-items-center">
     
     <a class="navbar-brand position-absolute" style="left: 50%; transform: translateX(-50%); margin: auto;" href="<c:url value='/dinosaures'/>">
-        <h1 class="logo" style="margin-bottom:0;">Datasaurus 3000</h1>
+        <h1 class="logo d-none d-xl-block" style="margin-bottom:0;">Datasaurus</h1>
     </a>
     
     <ul class="navbar-nav ml-auto d-flex flex-row align-items-center">
