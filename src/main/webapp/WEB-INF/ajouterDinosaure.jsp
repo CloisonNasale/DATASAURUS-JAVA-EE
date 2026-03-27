@@ -23,10 +23,10 @@
                 <h1>Ajouter un Dinosaure</h1>
                 <form method="post" action="ajouterDinosaure">
                     <div class="form-group">
-                        <label>Nom :</label> <input type="text" name="nomDino" />
+                        <label>Nom :</label> <input type="text" name="nomDino" required/>
                     </div>
                     <div class="form-group">
-                        <label>Espèce :</label> <input type="text" name="especeDino" />
+                        <label>Espèce :</label> <input type="text" name="especeDino" required/>
                     </div>
                     <div class="form-group">
                         <label>Ère :</label>
@@ -37,7 +37,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Régime :</label> <input type="text" name="regimeDino" />
+                        <label>Régime :</label>
+                        <select name="regimeDino">
+                            <option value="Herbivore">Herbivore</option>
+                            <option value="Carnivore">Carnivore</option>
+                            <option value="Omnivore">Omnivore</option>
+                        </select>
                     </div>
 
                     <div class="form-actions">

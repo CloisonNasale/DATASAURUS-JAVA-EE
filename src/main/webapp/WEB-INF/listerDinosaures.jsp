@@ -19,28 +19,28 @@
             <c:if test="${!empty erreur}">
                 <p class="error"><c:out value="${erreur}" /></p>
             </c:if>
-
-<div class="row controls animate__animated animate__fadeIn">
-    
-    <div class="col-12 col-lg-8"> 
-        <div class="search-bar">
-            <form action="dinosaures" method="get" class="d-flex">
-                <input type="text" name="recherche" class="form-control" placeholder="Nom, ère, régime..." value="<c:out value='${rechercheActuelle}' />" />
-                <button type="submit" class="ml-2">Rechercher</button>
-                <c:if test="${!empty rechercheActuelle}">
-                    <a href="dinosaures" class="btn-custom-danger ml-2 align-self-center">Effacer</a>
-                </c:if>
-            </form>
-        </div>
-    </div>
-
-    <div class="col-12 col-lg-4 align-self-center">
-        <a href="<c:url value='ajouterDinosaure'/>" class="btn-custom">
-            Ajouter un dinosaure
-        </a>
-    </div>
-    
-</div>
+			
+			<div class="row controls animate__animated animate__fadeIn">
+			    
+			    <div class="col-12 col-lg-8"> 
+			        <div class="search-bar">
+			            <form action="dinosaures" method="get" class="d-flex">
+			                <input type="text" name="recherche" class="form-control" placeholder="Nom, ère, régime..." value="<c:out value='${rechercheActuelle}' />" />
+			                <button type="submit" class="ml-2">Rechercher</button>
+			                <c:if test="${!empty rechercheActuelle}">
+			                    <a href="dinosaures" class="btn-custom-danger ml-2 align-self-center">Effacer</a>
+			                </c:if>
+			            </form>
+			        </div>
+			    </div>
+			
+			    <div class="col-12 col-lg-4 align-self-center">
+			        <a href="<c:url value='ajouterDinosaure'/>" class="btn-custom">
+			            Ajouter un dinosaure
+			        </a>
+			    </div>
+			    
+			</div>
 
             <table class="table-responsive animate__animated animate__fadeIn">
                 <thead>

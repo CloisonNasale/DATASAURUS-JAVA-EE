@@ -41,6 +41,15 @@
                             <option value="Crétacé" ${dinosaure.ere=='Crétacé' ? 'selected' : '' }>Crétacé</option>
                         </select>
                     </div>
+                    
+                    <div class="form-group">
+                        <label>Régime :</label>
+                        <select name="regimeDino">
+                            <option value="Carnivore" ${dinosaure.regimeAlimentaire=='Carnivore' ? 'selected' : '' }>Carnivore</option>
+                            <option value="Herbivore" ${dinosaure.regimeAlimentaire=='Herbivore' ? 'selected' : '' }>Herbivore</option>
+                            <option value="Omnivore" ${dinosaure.regimeAlimentaire=='Omnivore' ? 'selected' : '' }>Omnivore</option>
+                        </select>
+                    </div>
 
                     <div class="form-actions">
                         <a href="<c:url value='/dinosaures'/>" class="btn-custom-danger">Annuler</a>

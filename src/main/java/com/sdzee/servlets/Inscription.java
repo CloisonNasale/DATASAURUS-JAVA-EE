@@ -40,8 +40,8 @@ public class Inscription extends HttpServlet {
             } catch ( DAOException e ) {
                 Throwable cause = e.getCause();
                 if ( cause instanceof SQLIntegrityConstraintViolationException ) {
-                    // Email déjà utilisé → message convivial
-                    request.setAttribute( "erreur", "Cette adresse email est déjà utilisée. Veuillez en choisir une autre." );
+                	
+                    request.setAttribute( "erreur", "Cette adresse email est déjà utilisée." );
                 } else {
                     request.setAttribute( "erreur", "Une erreur est survenue lors de l'inscription. Veuillez réessayer." );
                 }

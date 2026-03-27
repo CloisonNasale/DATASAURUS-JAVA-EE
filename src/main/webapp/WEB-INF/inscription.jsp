@@ -27,7 +27,7 @@
             <form method="post" action="<c:url value='/inscription'/>">
 <div class="form-group">
     <label for="nom">Nom d'utilisateur</label>
-    <input type="text" id="nom" name="nom" value="<c:out value='${utilisateur.nom}'/>" required />
+    <input type="text" id="nom" name="nom" value="<c:out value='${utilisateur.nom}'/>" />
     <c:if test="${!empty form.erreurs['nom']}">
         <span class="error">${form.erreurs['nom']}</span>
     </c:if>
@@ -35,7 +35,7 @@
 
 <div class="form-group">
     <label for="email">Adresse email</label>
-    <input type="email" id="email" name="email" value="<c:out value='${utilisateur.email}'/>" required />
+    <input type="email" id="email" name="email" value="<c:out value='${utilisateur.email}'/>" />
     <c:if test="${!empty form.erreurs['email']}">
         <span class="error">${form.erreurs['email']}</span>
     </c:if>
@@ -43,7 +43,7 @@
 
 <div class="form-group">
     <label for="motdepasse">Mot de passe</label>
-    <input type="password" id="motdepasse" name="motdepasse" required />
+    <input type="password" id="motdepasse" name="motdepasse" />
     <c:if test="${!empty form.erreurs['motdepasse']}">
         <span class="error">${form.erreurs['motdepasse']}</span>
     </c:if>

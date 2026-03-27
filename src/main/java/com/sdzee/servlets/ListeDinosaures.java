@@ -26,7 +26,7 @@ public class ListeDinosaures extends HttpServlet {
     }
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-        // Redirection si l'utilisateur n'est pas connecté
+    	
         HttpSession session = request.getSession();
         if ( session.getAttribute( "sessionUtilisateur" ) == null ) {
             response.sendRedirect( request.getContextPath() + "/connexion" );
@@ -57,8 +57,6 @@ public class ListeDinosaures extends HttpServlet {
         }
 
         request.setAttribute( "dinosaures", dinosaures );
-        
-        // On conserve les paramètres pour les liens de tri
         request.setAttribute( "triActuel", tri != null ? tri : "id" );
         request.setAttribute( "ordreActuel", ordre != null ? ordre : "asc" );
         request.setAttribute( "rechercheActuelle", recherche != null ? recherche : "" );
